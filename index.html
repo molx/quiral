@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Água</title>
+    <style>
+      .flashdiv {
+          width: 800px;
+          margin: 0 auto;
+      }
+      p {
+        font-family: Verdana, Arial;
+        text-align: center;
+      }
+    </style>
+    <script>
+      function incSize() {
+        var height  = document.getElementById('emb').offsetHeight;
+        var newheight = height*1.1
+        document.getElementById('emb').style.height = newheight + 'px';
+        var width  = document.getElementById('emb').offsetWidth;
+        var newwidth = width*1.1
+        document.getElementById('emb').style.width = newwidth + 'px';
+        var width2  = document.getElementById('flashdiv').offsetWidth;
+        var newwidth2 = width2*1.1
+        document.getElementById('flashdiv').style.width = newwidth2 + 'px';
+      }
+      function lwrSize() {
+        var height  = document.getElementById('emb').offsetHeight;
+        var newheight = height/1.1
+        document.getElementById('emb').style.height = newheight + 'px';
+        var width  = document.getElementById('emb').offsetWidth;
+        var newwidth = width/1.1
+        document.getElementById('emb').style.width = newwidth + 'px';
+        var width2  = document.getElementById('flashdiv').offsetWidth;
+        var newwidth2 = width2/1.1
+        document.getElementById('flashdiv').style.width = newwidth2 + 'px';
+      }
+    </script>
+  </head>
+  <body>
+    <div id = "flashdiv" class="flashdiv">
+      <p>
+        <a href="sobrepondo2.exe" download>Download Standalone (Windows)</a>
+        <a href="sobrepondo2.swf" download>Download .swf (Qualquer navegador)</a>
+      </p>
+      <p>
+        <button type="button" onClick="incSize();">Zoom (+)</button>
+        <button type="button" onClick="lwrSize();">Zoom (-)</button>
+      </p>
+      <embed id ="emb" src="sobrepondo2.swf" width = "800" height = "600">
+    </div>
+  </body>
+</html>
+
+
